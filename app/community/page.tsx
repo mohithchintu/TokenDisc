@@ -114,16 +114,17 @@ function Community() {
                                 <div className='flex space-x-2'>
                                     <div className='flex flex-col justify-start'>
                                         {/* <h1 className='text-black font-bold'>{tweet.username}</h1> */}
-                                        <h1 className='text-[#8D8D8D]'>{tweet.authorEmail}</h1>
+                                        {/* <h1 className='text-[#8D8D8D]'>{tweet.authorEmail}</h1> */}
                                     </div>
                                     <div className='mt-5 w-5/6'>
-                                        <p>{tweet.tweet}</p>
+                                        {/* <p>{tweet.tweet}</p> */}
+                                        tweets
                                     </div>
                                     <div className='flex mt-5'>
                                         <FontAwesomeIcon icon={faComment} className='mr-2' />
                                         {/* <span className='mr-8'>{tweet.comments}</span> */}
                                         <FontAwesomeIcon icon={faRocket} className='mr-2' />
-                                        <span className='mr-8'>{tweet.likes}</span>
+                                        {/* <span className='mr-8'>{tweet.likes}</span> */}
                                         <FontAwesomeIcon icon={faShare} className='flex ml-auto' />
                                         <button className='rounded-md px-6 my-1 text-black '>...</button>
                                     </div>
