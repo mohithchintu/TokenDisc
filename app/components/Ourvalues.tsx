@@ -3,6 +3,7 @@ import Community from '../assets/Community.svg'
 import Demotrading from '../assets/Demotrading.svg'
 import Academy from '../assets/Academy.jpg'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Ourvalues() {
     return (
@@ -26,7 +27,7 @@ function Ourvalues() {
                             <p className='text-white  w-4/5 text-justify  '> An institute exclusively designed for Cryptocurrency and  block-chain technology</p>
                         </div>
                         <button className='bg-[#60A289] text-white py-3 border rounded-lg px-6 mt-2'>
-                            Join community
+                            <Link href='/learn'>Join community</Link>
                         </button>
                     </div>
 
@@ -50,7 +51,7 @@ function Ourvalues() {
                             <p className='text-white  w-4/5 text-justify  '> Be a significant part of fastest growing crypto Community in the world </p>
                         </div>
                         <button className='bg-[#60A289] text-white py-3 border rounded-lg px-6 mt-2'>
-                            Join community
+                            <Link href="/community">Join community</Link>
                         </button>
                     </div>
                 </div>
@@ -67,7 +68,7 @@ function Ourvalues() {
                             <p className='text-white w-4/5 text-justify  '> Take your First steps towards Crypto trading</p>
                         </div>
                         <button className='bg-[#28332E] text-white py-3 border rounded-lg px-6 mt-2'>
-                            Join community
+                            <Link href='/demo'>Start Demo Trading</Link>
                         </button>
                     </div>
 

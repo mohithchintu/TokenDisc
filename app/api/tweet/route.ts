@@ -1,8 +1,6 @@
 import { createTweetSchema } from "@/app/schemas/validationSchema";
 import prisma from "@/prisma/client";
 import { NextRequest, NextResponse } from "next/server";
-import { useSession } from '@clerk/nextjs';
-import { useState } from "react";
 
 export async function POST(request: NextRequest) {
     try {

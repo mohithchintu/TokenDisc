@@ -1,23 +1,26 @@
-"use client"
+"use client";
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComment } from '@fortawesome/free-solid-svg-icons';
-import { faRocket } from '@fortawesome/free-solid-svg-icons';
-import { faShare } from '@fortawesome/free-solid-svg-icons';
+import { faComment, faRocket, faShare } from '@fortawesome/free-solid-svg-icons';
 import { RiSendPlaneFill } from "react-icons/ri";
 import { useSession, UserButton } from '@clerk/nextjs';
 import { z } from 'zod';
 import { createTweetSchema } from '../schemas/validationSchema';
 import axios from 'axios';
 
+type UserForm = z.infer<typeof createTweetSchema>;
 
-type UserForm = z.infer<typeof createTweetSchema>
+interface Tweet {
+    authorEmail: string;
+    tweet: string;
+    likes: number;
+}
 
 function Community() {
     const [tweet, setTweet] = useState('');
     const [error, setError] = useState('');
-    const [tweets, setTweets] = useState([]);
+    const [tweets, setTweets] = useState<Tweet[]>([]);
     const { session } = useSession();
 
     const handlePost = async () => {
@@ -28,7 +31,6 @@ function Community() {
             });
             const response = await axios.post('/api/tweet', formattedTweetData);
             setTweet('');
-
         } catch (error) {
             setError("An error occurred while posting the tweet");
         }
@@ -38,7 +40,6 @@ function Community() {
         try {
             const response = await axios.get('/api/tweet');
             setTweets(response.data);
-            console.log(tweets);
         } catch (error) {
             console.error("Error fetching tweets:", error);
         }
@@ -47,8 +48,6 @@ function Community() {
     useEffect(() => {
         fetchTweets();
     }, []);
-
-
 
     return (
         <div className='bg-[#E9EBE7]'>
@@ -61,7 +60,6 @@ function Community() {
                             Community
                         </h1>
 
-
                         <div className='  flex items-center justify-between space-x-6 w-full mt-10 '>
                             <p>Connect, Clear and Ask your peer trades...</p>
                             <div className='flex justify-end'>
@@ -69,9 +67,7 @@ function Community() {
                                     Doubt? Ask here
                                 </button>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -86,14 +82,13 @@ function Community() {
                                 <h1 className='text-black font-bold'>{session?.user.fullName}</h1>
                                 <h1 className='text-[#8D8D8D]'>{session.user.primaryEmailAddress?.emailAddress}</h1>
                             </div>
-                        )} {!session && (
+                        )}
+                        {!session && (
                             <div className='flex flex-col justify-start'>
                                 <h1 className='text-black font-bold'>username</h1>
                                 <h1 className='text-[#8D8D8D]'>@email</h1>
                             </div>
                         )}
-
-
                     </div>
                     <button className='rounded-md text-white bg-[#60A289] border border-[#8DCEC1] px-6 my-1 ' onClick={handlePost}>Post</button>
                 </div>
@@ -105,7 +100,6 @@ function Community() {
                 </div>
             </div>
 
-
             {tweets.length > 0 ? (
                 <>
                     {tweets.map((tweet, index) => (
@@ -113,18 +107,15 @@ function Community() {
                             <div className='flex justify-between'>
                                 <div className='flex space-x-2'>
                                     <div className='flex flex-col justify-start'>
-                                        {/* <h1 className='text-black font-bold'>{tweet.username}</h1> */}
-                                        {/* <h1 className='text-[#8D8D8D]'>{tweet.authorEmail}</h1> */}
+                                        <h1 className='text-[#8D8D8D]'>{tweet.authorEmail}</h1>
                                     </div>
                                     <div className='mt-5 w-5/6'>
-                                        {/* <p>{tweet.tweet}</p> */}
-                                        tweets
+                                        <p>{tweet.tweet}</p>
                                     </div>
                                     <div className='flex mt-5'>
                                         <FontAwesomeIcon icon={faComment} className='mr-2' />
-                                        {/* <span className='mr-8'>{tweet.comments}</span> */}
                                         <FontAwesomeIcon icon={faRocket} className='mr-2' />
-                                        {/* <span className='mr-8'>{tweet.likes}</span> */}
+                                        <span className='mr-8'>{tweet.likes}</span>
                                         <FontAwesomeIcon icon={faShare} className='flex ml-auto' />
                                         <button className='rounded-md px-6 my-1 text-black '>...</button>
                                     </div>
@@ -135,9 +126,11 @@ function Community() {
                 </>
             ) : (
                 <div className='flex flex-col justify-start'>
-                    no tweets
+                    No tweets
                 </div>
             )}
         </div>
-    )
-} export default Community;
+    );
+}
+
+export default Community;

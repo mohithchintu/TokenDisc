@@ -1,8 +1,15 @@
 import React from 'react'
+import Marquee from '../components/marquee'
 
 const MarketPage = () => {
     return (
-        <div>MarketPage</div>
+        <div className='bg-[#E9EBE7]'>
+            <h1>
+                MarketPage
+            </h1>
+            <Marquee />
+            Details
+        </div>
     )
 }
 
