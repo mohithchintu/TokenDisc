@@ -21,7 +21,7 @@ function About() {
                     <div className=' flex flex-col items-center text-center space-y-6 '>
                         <div className='space-y-1 flex flex-col items-center '>
                             <p className='font-semibold text-lg text-white '>TDx</p>
-                            <p className='text-white text-wrap w-4/5 '> Get a slice of our Native 'Token-Disc' tokens </p>
+                            <p className='text-white text-wrap w-4/5 '>Get a slice of our Native &apos;Token-Disc&apos; tokens</p>
                         </div>
                         <button className='bg-[#28332E] text-white py-3 border rounded-lg px-6 mt-2'>
                             Create Now!
