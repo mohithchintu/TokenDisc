@@ -7,7 +7,7 @@ import Marquee from "./components/marquee";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-[#E9EBE7] p-1">
       <Marquee />
       <div className='py-3 px-32 space-y-8 bg-[#E9EBE7] '>
         <div
@@ -17,7 +17,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black opacity-40 rounded-[2rem]"></div>
 
           <div className='w-1/2 space-y-6 relative z-10'>
-            <h1 className='text-5xl font-bold text-white    '>
+            <h1 className='text-5xl font-bold text-white'>
               Your Personal Crypto Counsellor
             </h1>
           </div>
