@@ -14,7 +14,7 @@ const Marquee = () => {
     }, []);
 
     return (
-        <div className="livecoinwatch-widget-5 bg-[#E9EBE7]" lcw-base="USD" lcw-color-tx="#7bdcb5" lcw-marquee-1="coins" lcw-marquee-2="movers" lcw-marquee-items="30"></div>
+        <div className="livecoinwatch-widget-5 bg-[#E9EBE7]" lcw-base="USD" lcw-color-tx="#28332E" lcw-marquee-1="coins" lcw-marquee-2="movers" lcw-marquee-items="30"></div>
     );
 };
 

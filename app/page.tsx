@@ -7,7 +7,7 @@ import Marquee from "./components/marquee";
 
 export default function Home() {
   return (
-    <div className="bg-[#E9EBE7] p-1">
+    <div className="bg-[#b9e0d1] p-1">
       <Marquee />
       <div className='py-3 px-32 space-y-8 bg-[#E9EBE7] '>
         <div
