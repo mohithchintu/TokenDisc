@@ -10,10 +10,9 @@ import { UserButton, useSession } from '@clerk/nextjs';
 
 const NavBar = () => {
     const currentpath = usePathname();
-    // const { userId } = auth();
     const { session } = useSession();
     const links = [
-        { href: "/market", label: "Market" },
+        { href: "/market", label: "Demo Trading" },
         { href: "/community", label: "Community" },
         { href: "/learn", label: "Learn" },
         { href: "/support", label: "Help Center" },

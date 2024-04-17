@@ -4,20 +4,24 @@ import Newsletter from "./components/Newsletter";
 import Ourvalues from "./components/Ourvalues";
 import Link from "next/link";
 import Marquee from "./components/marquee";
+import Hero from './assets/hero.png'
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-[#b9e0d1] p-1">
+    <div>
       <Marquee />
       <div className='py-3 px-32 space-y-8 bg-[#E9EBE7] '>
         <div
           className="relative space-y-16 flex flex-col justify-end items-start font-display bg-[#28332E] min-h-[80vh] border border-black rounded-[2rem] p-14 text-white bg-cover bg-center bg-fixed"
-
         >
-          <div className="absolute inset-0 bg-black opacity-40 rounded-[2rem]"></div>
+          <div className="absolute inset-0 bg-black opacity-40 rounded-[2rem] bg-cover">
+            <Image className="h-full w-full rounded-[2rem]" src={Hero} alt="Image" />
+          </div>
+
 
           <div className='w-1/2 space-y-6 relative z-10'>
-            <h1 className='text-5xl font-bold text-white'>
+            <h1 className='text-5xl font-bold text-white    '>
               Your Personal Crypto Counsellor
             </h1>
           </div>

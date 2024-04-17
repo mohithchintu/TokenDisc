@@ -8,53 +8,32 @@ function Community() {
         <div className='space-y-8'>
             <div className='font-display space-y-2  '>
                 <p className='text-[#60A289] font-extrabold text-lg ' >Community</p>
-                <p className='text-black font-extrabold text-4xl'>Join the 2.5+ Baby Doge Army Members</p>
+                <p className='text-black font-extrabold text-4xl'>Join the Token Disc Community</p>
             </div>
-            <div className=' grid  grid-cols-3  gap-3 space-x-2  '>
-
-                <div className='border border-black   min-h-[50vh] rounded-3xl p-5 flex flex-col justify-end  bg-cover bg-center '>
-                    <div>
-                        <Image src={Discord} alt="" />
-                    </div>
-                    <div className=' flex flex-col items-center text-center space-y-6 py-3 '>
-                        <div className='space-y-1 flex flex-col items-center bg-cover bg-center'>
-
+            <div className='flex justify-between items-center space-x-3'>
+                <div className='border border-black rounded-3xl p-2 flex flex-row justify-center items-center '>
+                    <div className='justify-center items-center'>
+                        <Image src={Discord} alt="" className='max-h-[15vh]' />
+                        <div className=' flex flex-col items-center text-center space-y-2'>
                             <p className='font-semiboldtext-lg text-black '>Discord</p>
-
+                            <button className='bg-[#60A289] w-full text-white py-3 border rounded-lg px-6'>
+                                Join Now!
+                            </button>
                         </div>
-                        <button className='bg-[#60A289] text-white py-3 border rounded-lg px-6 mt-2'>
-                            Join Now!
-                        </button>
                     </div>
-
                 </div>
-                <div className='border border-black bg-[#28332E]  min-h-[50vh] rounded-3xl p-5 flex flex-col justify-end  ' >
-
-                    <div className=' flex flex-col items-center text-center space-y-6 py-3 '>
-                        <div className='space-y-1 flex flex-col items-center '>
-                            <p className='font-semiboldtext-lg text-white '>Whatsapp</p>
-
+                <div className='border border-black rounded-3xl p-2 grid flex-row justify-center items-center '>
+                    <div className='justify-center items-center'>
+                        <Image src={Discord} alt="" className='max-h-[15vh]' />
+                        <div className=' flex flex-col items-center text-center space-y-2'>
+                            <p className='font-semiboldtext-lg text-black '>Telegram</p>
+                            <button className='bg-[#60A289] w-full text-white py-3 border rounded-lg px-6'>
+                                Join Now!
+                            </button>
                         </div>
-                        <button className='bg-[#60A289] text-white py-3 border rounded-lg px-6 mt-2'>
-                            Join Now!
-                        </button>
                     </div>
-
-                </div>
-                <div className='border border-black bg-[#28332E]  min-h-[50vh] rounded-3xl p-5 flex flex-col justify-end  ' >
-                    <div className=' flex flex-col items-center text-center space-y-6 py-3'>
-                        <div className='space-y-1 flex flex-col items-center '>
-                            <p className='font-semiboldtext-lg text-white '>Token Disc Community</p>
-
-                        </div>
-                        <button className='bg-[#60A289] text-white py-3 border rounded-lg px-6 mt-2'>
-                            Join Now!
-                        </button>
-                    </div>
-
                 </div>
             </div>
-
         </div>
     )
 }

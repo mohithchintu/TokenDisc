@@ -14,7 +14,7 @@ const Coindata: React.FC = () => {
     }, []);
 
     return (
-        <div className="livecoinwatch-widget-3 overflow-scroll min-h-screen"
+        <div className="livecoinwatch-widget-3 overflow-scroll"
             lcw-base="INR"
             lcw-d-head="true"
             lcw-d-name="true"
