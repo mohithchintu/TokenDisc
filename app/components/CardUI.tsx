@@ -4,12 +4,12 @@ import { PiBookOpenBold } from "react-icons/pi";
 import BlockchainImage from '../assets/blockchain.png';
 import Link from 'next/link';
 
-type CourseStructure = {
-    courseId: string,
-    title: string,
-    chapterslength: number,
-    chapters: { id: string }[],
-    progress: number
+interface CourseStructure {
+    courseId: string;
+    title: string;
+    chapterslength: number;
+    chapters: { id: string }[];
+    progress: number;
 }
 
 const CardUI: React.FC<CourseStructure> = ({
@@ -34,7 +34,7 @@ const CardUI: React.FC<CourseStructure> = ({
                         {title}
                     </div>
                     <p className='text-xs text-muted-foreground'>
-                        catagory
+                        category
                     </p>
                     <div className='my-3 flex items-center gap-x-2 text-sm md:text-xs'>
                         <div className='flex items-center gap-x-1 text-slate-500'>

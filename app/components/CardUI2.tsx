@@ -3,7 +3,7 @@ import { FaLock } from 'react-icons/fa';
 import { TbChecks } from "react-icons/tb";
 
 type CardUIProps = {
-    id : number,
+    id: number,
     title: string,
     subTitle: string,
     chaptersCount: number,
@@ -29,7 +29,7 @@ const CardUI2: React.FC<CardUIProps> = ({
                     </p>
                     <div className='my-3 flex items-center gap-x-2 text-sm md:text-xs'>
                         <div className='flex items-center gap-x-1 text-slate-500'>
-                            {progress > id ? (<TbChecks size={18} color='green' />):(<FaLock />)}
+                            {progress > id ? (<TbChecks size={18} color='green' />) : (<FaLock />)}
                             
                             <span>
                                 {chaptersCount} {chaptersCount === 1 ? 'Chapter' : 'Chapters'}
