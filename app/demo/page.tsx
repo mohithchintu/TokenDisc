@@ -3,7 +3,12 @@ import React, { useEffect, useState } from 'react';
 import Coindata from '../components/coindata';
 
 const Demopage = () => {
+    const [ inbox, setInbox ] = useState('ETH')
     const [selectedCoin, setSelectedCoin] = useState("ETH");
+
+    const handlebutton = () => {
+        setSelectedCoin(inbox)
+    }
 
     useEffect(() => {
         const script = document.createElement('script');
@@ -14,7 +19,7 @@ const Demopage = () => {
         return () => {
             document.body.removeChild(script);
         };
-    }, []);
+    }, [selectedCoin]);
 
 
     return (
@@ -34,8 +39,8 @@ const Demopage = () => {
                 <Coindata />
             </div>
             <div className="w-1/3 flex flex-col bg-[#E9EBE7] p-4">
-                <input type="text" placeholder="Search" className="mb-4 p-2 rounded" onChange={(e) => setSelectedCoin(e.target.value)} />
-                <button className='bg-[#60A289] text-white mb-4 p-2 rounded'>search</button>
+                <input type="text" placeholder="Search" className="mb-4 p-2 rounded" onChange={(e) => setInbox(e.target.value)} />
+                <button className='bg-[#60A289] text-white mb-4 p-2 rounded' onClick={handlebutton}>search</button>
                 <button className="bg-[#60A289] text-white mb-4 p-2 rounded">Buy</button>
                 <button className="bg-[#616262] text-white mb-4 p-2 rounded">Sell</button>
             </div>

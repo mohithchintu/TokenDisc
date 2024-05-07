@@ -14,8 +14,8 @@ const NavBar = () => {
     const links = [
         { href: "/market", label: "Demo Trading" },
         { href: "/community", label: "Community" },
-        { href: "/learn", label: "Learn" },
-        { href: "/support", label: "Help Center" },
+        { href: "/courses", label: "Learn" },
+        { href: "/swap", label: "Swap" },
     ];
 
     return (
@@ -54,7 +54,7 @@ const NavBar = () => {
                         </>
                     )}
                     {session && (
-                        <Link href='profile' className='text-grey-300 hover:text-slate-400 mr-4'>Profile</Link>
+                        <Link href='/profile' className='text-grey-300 hover:text-slate-400 mr-4 mt-[2.5px]'>Profile</Link>
                     )}
                     <div className="ml-auto">
                         <UserButton afterSignOutUrl='/' appearance={{

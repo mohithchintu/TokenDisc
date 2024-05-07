@@ -1,31 +1,32 @@
-import Image from 'next/image'
-import React from 'react'
-import { PiBookOpenBold } from "react-icons/pi"
-import Blockchain from '../assets/blockchain.png'
-import Link from 'next/link'
+import Image from 'next/image';
+import React from 'react';
+import { PiBookOpenBold } from "react-icons/pi";
+import BlockchainImage from '../assets/blockchain.png';
+import Link from 'next/link';
 
 type CourseStructure = {
+    courseId: string,
     title: string,
     chapterslength: number,
     chapters: { id: string }[],
     progress: number
 }
 
-const CardUI = ({
+const CardUI: React.FC<CourseStructure> = ({
+    courseId,
     title,
     chapterslength,
-    chapters,
     progress
 }: CourseStructure) => {
     return (
-        <Link href={`/courses`}>
-            <div className='group-hover:shadow-sm transition overflow-hidden border rounded-lg p-3 h-full'>
+        <Link href={`/courses/${courseId}`}>
+            <div className='bg-[#E9EBE7] hover:shadow-md hover:-translate-y-1 transition overflow-hidden border rounded-lg p-3 h-full'>
                 <div className='relative w-full aspect-video rounded-md overflow-hidden'>
                     <Image
-                        fill
-                        className='objrct-cover'
-                        alt="Title"
-                        src={Blockchain}
+                        src={BlockchainImage}
+                        alt="Blockchain Course Image"
+                        layout="fill"
+                        objectFit="cover"
                     />
                 </div>
                 <div className='flex flex-col pt-2'>
@@ -33,7 +34,7 @@ const CardUI = ({
                         {title}
                     </div>
                     <p className='text-xs text-muted-foreground'>
-                        cata
+                        catagory
                     </p>
                     <div className='my-3 flex items-center gap-x-2 text-sm md:text-xs'>
                         <div className='flex items-center gap-x-1 text-slate-500'>
@@ -44,12 +45,12 @@ const CardUI = ({
                         </div>
                     </div>
                     <div>
-                        {progress}
+                        Progress: {progress}%
                     </div>
                 </div>
             </div>
         </Link>
-    )
-}
+    );
+};
 
-export default CardUI
+export default CardUI;
