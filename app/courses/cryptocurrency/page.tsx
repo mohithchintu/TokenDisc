@@ -3,7 +3,7 @@ import React from 'react'
 
 const page = () => {
     const exampleData = {
-        sno: 1,
+        id: 1,
         title: "Sample Title",
         subTitle: "Sample Subtitle",
         chaptersCount: 10,
@@ -12,21 +12,21 @@ const page = () => {
     return (
         <div className='p-5 grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-4'>
             <CardUI2
-                sno={exampleData.sno}
+                id={exampleData.id}
                 title={exampleData.title}
                 subTitle={exampleData.subTitle}
                 chaptersCount={exampleData.chaptersCount}
                 progress={exampleData.progress}
             />
             <CardUI2
-                sno={exampleData.sno}
+                id={exampleData.id}
                 title={exampleData.title}
                 subTitle={exampleData.subTitle}
                 chaptersCount={exampleData.chaptersCount}
                 progress={exampleData.progress}
             />
             <CardUI2
-                sno={exampleData.sno}
+                id={exampleData.id}
                 title={exampleData.title}
                 subTitle={exampleData.subTitle}
                 chaptersCount={exampleData.chaptersCount}
