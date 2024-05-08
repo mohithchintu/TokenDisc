@@ -18,7 +18,7 @@ export default function Home() {
         >
           {/* <Image className="h-full w-full rounded-[2rem]" src={Hero} alt="Image" /> */}
           <div className="absolute inset-0 rounded-[2rem] bg-cover">
-            <video className="w-full h-full object-cover rounded-[2rem]" loop>
+            <video loop autoPlay muted className="w-full h-full object-cover rounded-[2rem]">
               <source src='./tokenvideo.mp4' type="video/mp4" />
             </video>
           </div>
