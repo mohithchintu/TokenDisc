@@ -20,7 +20,7 @@ const NavBar = () => {
 
     return (
         <>
-            <div className='font-display flex justify-between items-center py-3 px-6 border-b border-gray-400 bg-[#E9EBE7] max-w-screen-xl mx-auto'>
+            <div className='font-display flex justify-between items-center py-3 px-6 border-b border-gray-400 bg-[#E9EBE7]'>
                 <Link href='/'>
                     <Image src={logo} alt="Token Disc logo" width={150} height={50} />
                 </Link>

@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 function Community() {
     return (
-        <div className='space-y-8'>
+        <div className='space-y-8 flex items-center justify-center gap-20'>
             <div className='font-display space-y-2  '>
                 <p className='text-[#60A289] font-extrabold text-lg ' >Community</p>
                 <p className='text-black font-extrabold text-4xl'>Join the Token Disc Community</p>
@@ -15,7 +15,7 @@ function Community() {
                     <div className='justify-center items-center'>
                         <Image src={Discord} alt="" className='max-h-[15vh]' />
                         <div className=' flex flex-col items-center text-center space-y-2'>
-                            <p className='font-semiboldtext-lg text-black '>Discord</p>
+                            <p className='font-semiboldtext-lg text-black '>Instagram</p>
                             <button className='bg-[#60A289] w-full text-white py-3 border rounded-lg px-6'>
                                 Join Now!
                             </button>
