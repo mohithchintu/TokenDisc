@@ -10,12 +10,12 @@ function Footer() {
                     <div>
                         <Image src={logo} alt="" />
                     </div>
-                    <p className="text-justify text-start">
-                        Token Disc, the world’s leading bitcoin ATM operator, makes it so
-                        flippin’ easy to buy and sell bitcoin via cash, card, or bank
-                        transfer.{" "}
+                    <p className="text-justify text-start text-black">
+                    TOKEN-DISC is the ultimate exchange that educates, empowers, and
+enhances the concepts of crypto-currency / blockchain which will transform this
+space into a mainstream asset class for investments, savings, and trading.{" "}
                     </p>
-                    <p>
+                    <p  className="text-black">
                         Sign up to get the latest in Token Disc news, discounts, and more.
                     </p>
 
@@ -33,18 +33,18 @@ function Footer() {
                     </p>
                 </div>
                 <div className="py-20 px-20">
-                    <ul className="list-none space-y-5">
-                        <li className="font-bold text-sm">Company</li>
+                    <ul className="list-none space-y-5 text-black">
+                        <li className="font-bold text-sm ">Company</li>
                         <li>About</li>
-                        <li>Careers</li>
-                        <li>Press</li>
                         <li>News</li>
-                        <li>Merch</li>
+                        <li>Support</li>
+                        <li>FAQ's</li>
+                        
                     </ul>
                 </div>
                 <div className="py-20 px-20">
-                    <ul className="list-none space-y-5">
-                        <li className="font-bold text-sm whitespace-nowrap">
+                    <ul className="list-none space-y-5 text-black">
+                        <li className="font-bold text-sm whitespace-nowrap text-black">
                             Privacy Policy & Terms of Service
                         </li>
                         <li className="whitespace-nowrap">Token Disc Privacy Policy</li>
