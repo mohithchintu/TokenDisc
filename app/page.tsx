@@ -15,9 +15,12 @@ export default function Home() {
         <div
           className="relative space-y-16 flex flex-col justify-end items-start font-display bg-[#28332E] min-h-[80vh] border border-black rounded-[2rem] p-14 text-white bg-cover bg-center bg-fixed"
         >
-          <div className="absolute inset-0 bg-black opacity-40 rounded-[2rem] bg-cover">
-            <Image className="h-full w-full rounded-[2rem]" src={Hero} alt="Image" />
-          </div>
+          {/* <Image className="h-full w-full rounded-[2rem]" src={Hero} alt="Image" /> */}
+          <div className="absolute inset-0 rounded-[2rem] bg-cover">
+            <video loop autoPlay muted className="w-full h-full object-cover rounded-[2rem]">
+              <source src='./tokenvideo.mp4' type="video/mp4" />
+            </video>
+            </div>
 
 
           <div className='w-1/2 space-y-6 relative z-10'>
