@@ -10,7 +10,7 @@ function Footer() {
                     <div>
                         <Image src={logo} alt="" />
                     </div>
-                    <p className="text-justify text-start text-black">
+                    <p className="text-justify text-black">
                     TOKEN-DISC is the ultimate exchange that educates, empowers, and
 enhances the concepts of crypto-currency / blockchain which will transform this
 space into a mainstream asset class for investments, savings, and trading.{" "}
