@@ -38,7 +38,7 @@ space into a mainstream asset class for investments, savings, and trading.{" "}
                         <li>About</li>
                         <li>News</li>
                         <li>Support</li>
-                        <li>FAQ's</li>
+                        <li>FAQ&apos;s</li>
                         
                     </ul>
                 </div>

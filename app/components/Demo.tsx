@@ -6,7 +6,7 @@ interface TradingViewWidgetProps {
 
 const TradingViewWidget: React.FC<TradingViewWidgetProps> = ({ theme }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-
+  
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
@@ -37,11 +37,15 @@ const TradingViewWidget: React.FC<TradingViewWidgetProps> = ({ theme }) => {
   }, [theme]);
 
   return (
+    containerRef === null ? (<div>
+      loading...
+    </div>):(
     <div className="tradingview-widget-container" ref={containerRef} style={{ height: "100%", width: "100%" }}>
       <div className="tradingview-widget-container__widget" style={{ height: "calc(100% - 32px)", width: "100%" }}></div>
       <div className="tradingview-widget-copyright">
       </div>
     </div>
+    )
   );
 };
 
